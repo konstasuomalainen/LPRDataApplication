@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Lappeenranta City Purchasing Receipts Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a barebones **React front-end** with a **Python (FastAPI) back-end** and an **SQLite3 database**. The application reads Lappeenranta's purchasing receipts from Excel files, downloaded from **Avoin Data**, covering the years 2020 to 2023. The front end provides basic sorting functionalities for efficient data viewing.
 
-Currently, two official plugins are available:
+## Features
+- React front end to display Lappeenranta purchasing receipts.
+- FastAPI back end to serve data to the front end.
+- SQLite3 database to store and retrieve purchasing data.
+- Basic sorting of receipts by various fields in the front end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Front End**: React
+- **Back End**: FastAPI (Python)
+- **Database**: SQLite3
+- **Data Source**: Excel files (Avoin Data)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   
 
-- Configure the top-level `parserOptions` property like this:
+3. Install dependencies for both the front end and back end.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   - For the back end (FastAPI):
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+     pip install -r requirements.txt
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   - For the front end (React):
+
+     npm install
+
+
+4. Run the development servers.
+
+   - For the FastAPI back end:
+
+     ```bash
+     uvicorn main:app --reload
+     ```
+
+   - For the React front end:
+
+     ```bash
+     npm start
+     ```
