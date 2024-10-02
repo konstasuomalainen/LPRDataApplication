@@ -5,7 +5,7 @@ const NavHeader = () => {
       <div className="nav-container">
         <div className="leftSide">
           <img className="svg" src={noteSVG} alt="" />
-          <p>MUISTIO-NOTES</p>
+          <p>LAPPEENRANTA DATA</p>
         </div>
 
         <button>LOGIN</button>

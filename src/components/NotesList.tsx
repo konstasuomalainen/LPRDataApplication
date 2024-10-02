@@ -1,29 +1,29 @@
-import React from "react";
+import { useLocalStorage } from "./useLocalStorage";
+import { useState, useEffect } from "react";
 
 interface Note {
+  id: string;
   title: string;
   content: string;
-  timestamp: string;
 }
 
-interface NotesListProps {
-  notes: Note[];
-  onSelectNote: (note: Note) => void;
-}
+const NotesList = ({ handleAddNote }: any) => {
+  const { getNote } = useLocalStorage("notes");
+  const [notes, setNotes] = useState<Note[]>([]);
+  const notesList2 = handleAddNote;
+  useEffect(() => {
+    const storedNotes = getNote();
+    console.log(notesList2, storedNotes);
+    console.log("Stored Notes:");
+    console.log({ setNotes });
+  }, []);
 
-const NotesList: React.FC<NotesListProps> = ({ notes, onSelectNote }) => {
   return (
     <div className="notesList-container">
       <ul className="list">
-        {notes.map((note, index) => (
-          <li
-            className="note-card"
-            key={index}
-            onClick={() => onSelectNote(note)}
-          >
+        {notes.map((note) => (
+          <li className="note-card" key={note.id} id={note.id}>
             <strong>{note.title}</strong>
-            <small className="timestamp">{note.timestamp}</small>{" "}
-            {/* Display the timestamp */}
           </li>
         ))}
       </ul>

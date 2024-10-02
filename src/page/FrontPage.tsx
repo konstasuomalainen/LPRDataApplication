@@ -2,29 +2,20 @@
 import NavHeader from "../components/NavHeader";
 import NotesList from "../components/NotesList";
 import NoteInput from "../components/NoteInput";
-import { useState } from "react";
-interface Note {
-  title: string;
-  content: string;
-  timestamp: string;
-}
 
 const FrontPage = () => {
-  const [notes, setNotes] = useState<Note[]>([]);
+  const addNote = (text: any) => {
+    const sendNotesToList = [text];
 
-  const [selectedNote, setSelectedNote] = useState<Note | null>(null);
-
-  const handleSave = (note: Note) => {
-    setNotes([...notes, note]);
+    return sendNotesToList;
   };
-
   return (
     <div className="container">
       <section className="notes-container">
         <NavHeader />
         <div className="notes-container-contents">
-          <NotesList notes={notes} onSelectNote={setSelectedNote} />
-          <NoteInput note={selectedNote} onSave={handleSave} />
+          <NotesList handleAddNote={addNote}></NotesList>
+          <NoteInput handleAddNote={addNote} />
         </div>
       </section>
     </div>

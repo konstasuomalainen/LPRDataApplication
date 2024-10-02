@@ -1,43 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useLocalStorage } from "./useLocalStorage";
+import { v4 as uuidv4 } from "uuid";
 
-interface Note {
-  title: string;
-  content: string;
-  timestamp: string; // Include timestamp
-}
-
-interface NoteInputProps {
-  note: Note | null;
-  onSave: (note: Note) => void;
-}
-
-const NoteInput: React.FC<NoteInputProps> = ({ note, onSave }) => {
-  const [title, setTitle] = useState(note?.title || "");
-  const [content, setContent] = useState(note?.content || "");
-
-  useEffect(() => {
-    if (note) {
-      setTitle(note.title);
-      setContent(note.content);
-    } else {
-      setTitle("");
-      setContent("");
-    }
-  }, [note]);
+const NoteInput = ({ handleAddNote }: any) => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const { setNote, getNote, deleteNote } = useLocalStorage("notes");
 
   const handleSave = () => {
-    if (title.trim() && content.trim()) {
-      const newNote: Note = {
-        title,
-        content,
-        timestamp: new Date().toLocaleString(), // Generate current timestamp
-      };
-      onSave(newNote);
-      setTitle("");
-      setContent("");
-    }
+    const note = { id: uuidv4(), title, content };
+
+    const allNotes = getNote();
+    const updatedNotes = [...allNotes, note];
+    setNote(updatedNotes);
+    setTitle("");
+    handleAddNote(updatedNotes);
+    setContent("");
+  };
+  const handleGet = () => {
+    const note = getNote();
+
+    setTitle(note.title || "");
+    setContent(note.content || "");
   };
 
+  const handleDelete = () => {
+    console.log(deleteNote);
+  };
   return (
     <div className="inputArea-container">
       <input
@@ -53,8 +42,14 @@ const NoteInput: React.FC<NoteInputProps> = ({ note, onSave }) => {
         placeholder="Write your content here"
         className="note-textarea"
       />
+      <button className="delete-button" onClick={handleDelete}>
+        Delete
+      </button>
       <button className="save-button" onClick={handleSave}>
         Save
+      </button>
+      <button className="get-button" onClick={handleGet}>
+        Get
       </button>
     </div>
   );

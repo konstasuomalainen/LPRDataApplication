@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .notes-container {
   width: 95%;
   height: 100%;
@@ -34,6 +35,7 @@ body {
   height: 90%;
   margin-top: 20px;
 }
+
 /*************** NAV ************/
 .nav {
   width: 100%;
@@ -88,8 +90,6 @@ nav button:hover {
   justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
-  filter: invert(0%) sepia(6%) saturate(7500%) hue-rotate(257deg)
-    brightness(93%) contrast(107%);
 }
 .inputArea-container {
   display: flex;
@@ -132,18 +132,54 @@ nav button:hover {
   transition: background-color 0.3s ease;
 }
 
+.delete-button {
+  margin-top: 20px;
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #7e0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-button {
+  margin-top: 20px;
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: rgb(0, 109, 233);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #9c0000;
+}
 .save-button:hover {
   background-color: #218838;
+}
+.get-button:hover {
+  background-color: rgb(0, 80, 172);
 }
 
 .notesList-container {
   width: 30%; /* Adjust the width as per design */
   height: 100%;
   padding: 20px 20px 0;
+  margin-right: 10px;
   background-color: transparent;
   border-radius: 15px;
   overflow-y: auto;
   align-items: start;
+  border: 2px solid black;
+  min-height: 365px;
+  overflow-y: auto;
+
+  max-height: 365px;
 }
 
 .list {
@@ -168,4 +204,77 @@ nav button:hover {
 
 .timestamp {
   margin-left: 10px;
+}
+
+/****************** BIKE *************/
+
+.bikeContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  overflow-x: hidden;
+  font-size: 0.8em;
+}
+
+.table.container {
+  min-width: auto;
+  width: 100vw;
+  align-items: center;
+}
+
+.tableBody {
+  width: auto;
+}
+.loadMore {
+  width: 30%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+table {
+  table-layout: fixed;
+
+  width: 100%; /* or a fixed width like 800px */
+}
+
+th,
+td {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+tr {
+  font-size: 0.9em;
+}
+
+th {
+  border: 1px solid black;
+  height: 3em;
+}
+
+th:hover {
+  background-color: rgb(211, 211, 211);
+}
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.loadMore2020 {
+  width: 30%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: rgb(114, 114, 114);
 }
