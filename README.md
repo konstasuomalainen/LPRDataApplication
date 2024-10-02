@@ -2,7 +2,7 @@
 
 ![Screenshot 2024-10-02 at 16-59-44 Vite React TS](https://github.com/user-attachments/assets/a0c03a1e-f56b-4c06-8964-980880aa7755)
 
-This project is a barebones **React front-end** with a **Python (FastAPI) back-end** and an **SQLite3 database**. The application reads Lappeenranta's purchasing receipts from Excel files, downloaded from **Avoin Data**, covering the years 2020 to 2023. The front end provides basic sorting functionalities for efficient data viewing.
+This project is a barebones **React front-end** with a **Python (FastAPI) back-end** and an **SQLite3 database**. The application reads Lappeenranta's purchasing receipts from Excel files, downloaded from **avoindata.fi**, covering the years 2020 to 2023. The front end provides basic sorting functionalities for efficient data viewing.
 
 ## Features
 - React front end to display Lappeenranta purchasing receipts.
