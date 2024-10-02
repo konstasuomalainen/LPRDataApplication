@@ -27,16 +27,18 @@ I haven't figured out yet how to host the back-end and app doesn't work without 
 ## Installation
 
 1. Clone the repository:
-   
 
-3. Install dependencies for both the front end and back end.
+2. Host the Back-End yourself (i will do it soon i promise)
+   - https://github.com/konstasuomalainen/LPRDATABACKEND
+4. Install dependencies
 
    - For the front end (React):
 
      npm install
 
+      npm run dev
 
-4. Run the development servers.
+5. Run the development servers.
 
    - For the React front end:
 
