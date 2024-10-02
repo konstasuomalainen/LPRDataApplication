@@ -1,17 +1,17 @@
 // import Spline from "@splinetool/react-spline";
 import NavHeader from "../components/NavHeader";
-import DisplayBikeDataList from "../LPRDataFolder/DisplayLPRData";
+import DisplayLPRDataList from "../LPRDataFolder/DisplayLPRData";
 
-const BikePage = () => {
+const LPRDataPage = () => {
   return (
     <div className="container">
       <section className="notes-container">
         <NavHeader />
         <div className="notes-container-contents"></div>
-        <DisplayBikeDataList></DisplayBikeDataList>
+        <DisplayLPRDataList></DisplayLPRDataList>
       </section>
     </div>
   );
 };
 
-export default BikePage;
+export default LPRDataPage;
