@@ -1,4 +1,4 @@
-# Lappeenranta City Purchasing Receipts Viewer
+# Lappeenranta City Purchasing Receipts Viewer React Front-End
 
 ![Screenshot 2024-10-02 at 16-59-44 Vite React TS](https://github.com/user-attachments/assets/a0c03a1e-f56b-4c06-8964-980880aa7755)
 
