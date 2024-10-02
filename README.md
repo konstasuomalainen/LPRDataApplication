@@ -30,18 +30,19 @@ I haven't figured out yet how to host the back-end and app doesn't work without 
 
 2. Host the Back-End yourself (i will do it soon i promise)
    - https://github.com/konstasuomalainen/LPRDATABACKEND
+   
 4. Install dependencies
 
    - For the front end (React):
 
+     ```bash
      npm install
-
-      npm run dev
+     ```
 
 5. Run the development servers.
 
    - For the React front end:
 
      ```bash
-     npm start
+     npm run dev
      ```
