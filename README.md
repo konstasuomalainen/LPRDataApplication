@@ -1,5 +1,7 @@
 # Lappeenranta City Purchasing Receipts Viewer
 
+![Screenshot 2024-10-02 at 16-59-44 Vite React TS](https://github.com/user-attachments/assets/a0c03a1e-f56b-4c06-8964-980880aa7755)
+
 This project is a barebones **React front-end** with a **Python (FastAPI) back-end** and an **SQLite3 database**. The application reads Lappeenranta's purchasing receipts from Excel files, downloaded from **Avoin Data**, covering the years 2020 to 2023. The front end provides basic sorting functionalities for efficient data viewing.
 
 ## Features
@@ -14,6 +16,13 @@ This project is a barebones **React front-end** with a **Python (FastAPI) back-e
 - **Database**: SQLite3
 - **Data Source**: Excel files (Avoin Data)
 
+## Usage
+
+URL: https://frontendforlprdata.web.app/
+I haven't figured out yet how to host the back-end and app doesn't work without it :=) 
+(soon it will work) 
+- Konsta 2.10.2024
+
 ## Installation
 
 1. Clone the repository:
@@ -21,23 +30,12 @@ This project is a barebones **React front-end** with a **Python (FastAPI) back-e
 
 3. Install dependencies for both the front end and back end.
 
-   - For the back end (FastAPI):
-
-     pip install -r requirements.txt
-
-
    - For the front end (React):
 
      npm install
 
 
 4. Run the development servers.
-
-   - For the FastAPI back end:
-
-     ```bash
-     uvicorn main:app --reload
-     ```
 
    - For the React front end:
 
