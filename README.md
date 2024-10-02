@@ -20,6 +20,7 @@ This project is a barebones **React front-end** with a **Python (FastAPI) back-e
 
 URL: https://frontendforlprdata.web.app/
 I haven't figured out yet how to host the back-end and app doesn't work without it :=) 
+
 (soon it will work) 
 - Konsta 2.10.2024
 
