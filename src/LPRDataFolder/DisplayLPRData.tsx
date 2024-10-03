@@ -82,7 +82,7 @@ const DisplayLPRData = () => {
   const clearCurrentList = () => {
     setLPRData([]);
     data();
-    setNumber(0);
+    setNumber(10);
   };
 
   const loadMore = () => {
@@ -92,7 +92,7 @@ const DisplayLPRData = () => {
     fetchLPRData();
     if (!hasMore || isLoading) return;
 
-    setNumber((prevNumber) => prevNumber + 50);
+    setNumber((prevNumber) => prevNumber + 40);
   };
 
   const handleYearClick = (selectYear: any) => {
