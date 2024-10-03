@@ -15,6 +15,7 @@ This project is a barebones **React front-end** with a **Python (FastAPI) back-e
 - **Back End**: FastAPI (Python)
 - **Database**: SQLite3
 - **Data Source**: Excel files (Avoin Data)
+- **Back-End Hosting** Hosted on Cloud Run in Docker
 
 ## Usage
 
@@ -25,6 +26,9 @@ I haven't figured out yet how to host the back-end and app doesn't work without 
 
 (soon it will work) 
 - Konsta 2.10.2024
+EDIT 3.10.2024
+ITS WORKING NOW!
+  
 
 ## Installation
 
