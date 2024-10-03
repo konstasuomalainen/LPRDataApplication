@@ -82,7 +82,7 @@ const DisplayLPRData = () => {
   const clearCurrentList = () => {
     setLPRData([]);
     data();
-    setNumber(10);
+    setNumber(0);
   };
 
   const loadMore = () => {
