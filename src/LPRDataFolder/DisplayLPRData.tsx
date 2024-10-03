@@ -57,7 +57,7 @@ const DisplayLPRData = () => {
       const yearString = selectedYear.toString();
       const skip = number.toString();
       const res = await axios.get(
-        `http://127.0.0.1:8000/data/${yearString}?limit=${limit}&skip=${skip}`
+        `https://lprdatabackend-196740120714.europe-north1.run.app/data/${yearString}?limit=${limit}&skip=${skip}`
       );
 
       console.log("Fetched data:", res.data);
